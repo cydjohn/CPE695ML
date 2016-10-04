@@ -1,10 +1,17 @@
 # -*- coding: UTF-8 -*-  
 from twitter import *
 
+
+
 t = Twitter(
     auth=OAuth('772828862942175232-EohaQboJpvZkor7bt0argGggkAwh2mo', 'pD1auN2XIVWFtQl84mbQW8FU2rugGTuZEoVDVVFlNVkZW', 'sRVZEM6K02ovYJ0At147BpGbu', 'w85lyM2ZAZrBzuxlgtVG2H4BUJJbeLQ7fnLxA1hCCLeXRl2hhj'))
 # Get your "home" timeline
-print t.statuses.home_timeline()
+# print t.statuses.home_timeline()
+
+
+# result = t.search.tweets(q="#NY")
+
+# print result
 
 # # Get a particular friend's timeline
 # t.statuses.user_timeline(screen_name="billybob")
