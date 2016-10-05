@@ -7,7 +7,7 @@ We will be using **python2.7** for this project!
 
 
 ~~~bash
-pip install twitter
+pip install TwitterAPI
 ~~~
 
 
@@ -19,7 +19,7 @@ The best I've ever have so far: <http://www.liaoxuefeng.com/wiki/001431608955726
 
 twitter API: <https://dev.twitter.com/rest/public>
 
-python twitter package: <https://github.com/sixohsix/twitter>
+python twitter package: <https://github.com/geduldig/TwitterAPI>
 
 
 
