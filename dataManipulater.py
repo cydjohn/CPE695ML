@@ -22,7 +22,8 @@ def geatherUserTimeline():
 
 
 if __name__ == "__main__":
+	geatherUsers()
 	geatherUserTimeline()
-	# geatherUsers()
+
 
 	

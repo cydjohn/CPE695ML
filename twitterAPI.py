@@ -9,7 +9,7 @@ api = TwitterAPI("sRVZEM6K02ovYJ0At147BpGbu", "w85lyM2ZAZrBzuxlgtVG2H4BUJJbeLQ7f
 
 class MLTwitterAPI(object):	
 	def searchForUsers(self):
-		queryKeyWords = ['New York','NY']
+		queryKeyWords = ['New York','NY','NewYork']
 		for q in queryKeyWords:
 			r = api.request('search/tweets', {'q':q})
 			for item in r:
