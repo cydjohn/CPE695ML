@@ -1,12 +1,12 @@
-from database import MLDatabase
+from userData import MLUserDatabase
 
-db= MLDatabase()
+userdb= MLUserDatabase()
 
 class userDataModel(object):
 	"""docstring for userDataModel"""
 	def insertUserDataIntoDatabase(self,data):
-		if db.find_one(data["id_str"]) is False:
-			db.addData(data)
+		if userdb.find_one(data["id_str"]) is False:
+			userdb.addData(data)
 			print data
 
 		

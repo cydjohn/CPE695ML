@@ -1,20 +1,28 @@
-from database import MLDatabase
+from userData import MLUserDatabase
+from twitterData import MLTwitterDatabase
 from twitterAPI import MLTwitterAPI
 import json
 
-db= MLDatabase()
+userdb= MLUserDatabase()
+twitterdb = MLTwitterDatabase()
 Twitter = MLTwitterAPI()
+
+def geatherUsers():
+	Twitter.searchForUsers()
+	print userdb.getAllDataNumber()
+
+
+
+def geatherUserTimeline():
+	# Twitter.getUserTimelineByUserId("82943769")
+	for d in userdb.getAllData():
+		# d.pop('_id', None)
+		# print json.dumps(d, indent=4, sort_keys=True)
+		Twitter.getUserTimelineByUserId(d["id_str"])
 
 
 if __name__ == "__main__":
-	# Twitter.searchForUsers()
-	# data = {'user_id': 211, 'name': 'Luke'}
-	# print db.addData(data)
-	# for d in db.getAllData():
-	# 	# d.pop('_id', None)
-	# 	print d["id"]
-	# 	print json.dumps(d, indent=4, sort_keys=True)
-	# print db.find_one("45716372")
-	# print db.removeAllData()
+	geatherUserTimeline()
+	# geatherUsers()
 
-	print db.getAllDataNumber()
+	
