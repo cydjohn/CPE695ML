@@ -11,8 +11,6 @@ def geatherUsers():
 	Twitter.searchForUsers()
 	print userdb.getAllDataNumber()
 
-
-
 def geatherUserTimeline():
 	# Twitter.getUserTimelineByUserId("82943769")
 	for d in userdb.getAllData():

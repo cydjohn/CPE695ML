@@ -2,8 +2,11 @@
 from TwitterAPI import TwitterAPI
 import json
 from userDataModel import userDataModel
+from twitterDataModel import twitterDataModel
+
 
 userModel = userDataModel()
+twitterModel = twitterDataModel()
 
 api = TwitterAPI("sRVZEM6K02ovYJ0At147BpGbu", "w85lyM2ZAZrBzuxlgtVG2H4BUJJbeLQ7fnLxA1hCCLeXRl2hhj", "772828862942175232-EohaQboJpvZkor7bt0argGggkAwh2mo", "pD1auN2XIVWFtQl84mbQW8FU2rugGTuZEoVDVVFlNVkZW")
 
@@ -32,9 +35,21 @@ class MLTwitterAPI(object):
 	def getUserTimelineByUserId(self,userId):
 		r = api.request('statuses/user_timeline',{'user_id':userId})
 		res = json.loads(r.text)
+		print res
 		# print json.dumps(res[0], indent=4, sort_keys=True)
 		for data in res:
-			print data["geo"]
+
+			try:
+				if data["geo"] is not None:
+					twitterModel.insertUserDataIntoDatabase(data)
+				pass
+			except Exception as e:
+				print data
+				print 'user id:' + userId
+				raise e
+
+				
+
 
 
 
