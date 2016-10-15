@@ -8,4 +8,6 @@ class twitterDataModel(object):
 		if twitterdb.find_one(data["id_str"]) is False:
 			twitterdb.addData(data)
 			print data["geo"]
+
+	
 		

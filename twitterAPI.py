@@ -30,19 +30,17 @@ class MLTwitterAPI(object):
 				res = res[0]["location"].lower()
 		except Exception as e:
 			raise
-		return (('ny' in res) or ('new york' in res))
+		return (('ny' in res) or ('new york' in res) or ('newyork' in res))
 
 	def getUserTimelineByUserId(self,userId):
 		r = api.request('statuses/user_timeline',{'user_id':userId})
 		res = json.loads(r.text)
-		print res
 		# print json.dumps(res[0], indent=4, sort_keys=True)
 		for data in res:
-
 			try:
 				if data["geo"] is not None:
 					twitterModel.insertUserDataIntoDatabase(data)
-				pass
+					print 'new twitts added!! id: ' + str(data["id"])
 			except Exception as e:
 				print data
 				print 'user id:' + userId

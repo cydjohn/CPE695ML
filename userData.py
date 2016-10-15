@@ -11,17 +11,17 @@ class MLUserDatabase():
 		# return userData.find_one({"author" : "Mike" })
 
 	def getAllDataNumber(self):
-		return userData.find().count()
+		number = userData.find().count()
+		print 'total user number: ' + str(number)
+		return number
 
 	def find_one(self,dataId):
 		if userData.find_one({"id_str":dataId}) is None:
 			return False
 		return True
 
-	def testdata(self):
-		post = {"author": "Mike","text": "My first blog post!","tags": ["mongodb", "python", "pymongo"],"date": "lalalal"}
-		post_id = userData.insert_one(post).inserted_id
-		print post_id
-
 	def removeAllData(self):
 		userData.remove()
+
+	def deleteUserById(self,uesrId):
+		userData.delete_one({"id_str":uesrId})

@@ -10,12 +10,20 @@ class MLTwitterDatabase():
 		return twitterData.find()
 
 	def getAllDataNumber(self):
-		return twitterData.find().count()
+		number = twitterData.find().count()
+		print 'total twitts number: ' + str(number)
+		return number
 
 	def find_one(self,dataId):
 		if twitterData.find_one({"id_str":dataId}) is None:
 			return False
 		return True
 
-	def removeAllData(self):
-		twitterData.remove()
+	def find(self,data):
+		return twitterData.find({"user.id_str":data}) 
+
+	def findUserById(self,userId):
+		return  not twitterData.find_one({"user.id_str":userId}) is None
+
+	# def removeAllData(self):
+	# 	twitterData.remove()
