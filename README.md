@@ -5,11 +5,30 @@ We will be using **python2.7** for this project!
 
 ## How to use
 
+**for API**
 
 ~~~bash
 pip install TwitterAPI
 ~~~
 
+**for mongodb**
+
+~~~bash
+python -m pip install pymongo
+~~~
+
+**you have to install mongoDB on your machine first!!**
+
+~~~bash
+# if you are using Mac
+brew install mongodb
+~~~
+
+## Run
+
+~~~bash
+python dataManipulater.py
+~~~
 
 ### python teaching resources
 

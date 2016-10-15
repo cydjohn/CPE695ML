@@ -24,8 +24,8 @@ def deleteUselessUser():
 
 if __name__ == "__main__":
 
-	# geatherUsers()
-	# geatherUserTimeline()
+	geatherUsers()
+	geatherUserTimeline()
 	twitterdb.getAllDataNumber()
 	userdb.getAllDataNumber()
 	# deleteUselessUser()
