@@ -8,7 +8,18 @@ from twitterDataModel import twitterDataModel
 userModel = userDataModel()
 twitterModel = twitterDataModel()
 
-api = TwitterAPI("sRVZEM6K02ovYJ0At147BpGbu", "w85lyM2ZAZrBzuxlgtVG2H4BUJJbeLQ7fnLxA1hCCLeXRl2hhj", "772828862942175232-EohaQboJpvZkor7bt0argGggkAwh2mo", "pD1auN2XIVWFtQl84mbQW8FU2rugGTuZEoVDVVFlNVkZW")
+# houxiao
+api = TwitterAPI("W8NTyH7gPrpHqarHAN7wgLmfS", "RcRb3pfmroL4HM2vdkOVbQ1pKU2UGvFcZEaB1X1LTljxDsB9KE", "787382500775567360-ejMvvlX2eMuqKpsfPJTfeYm5XVFNNVn", "oxkblc1iVzbKUwlUoZNlMLsg6Q4Z39GckmnpdhOJbZxxT")
+
+
+# aojia
+# api = TwitterAPI("TtbTJVlxNchNPpBNhNVpqmxp1", "ard2JXdId7JkRM057JHe9RQkfmFWfMFSvscYyzTV6T10OYxhi4", "2686608859-Xl3s3B0fjk6Te7D2lC8l7eChKwKFaTgTyFZqzaU", "pcJYLNB3lNbsd2PuZJUc2L18Xd1GraomxD81FKpgPs4Zp")
+
+# ziheng
+# api = TwitterAPI("s45hPkpXAlWSMnwu7pqftpVRa", "nNBUIbXr8428DzQatmFIobJ3Bd67JUTSqzkYES1RlJXHuTPpUd", "787306318826799104-Q81JDS0Vz70W7hSBTqZkUeywx9r7FX2", "s3DLsZRVMolwQOhbqeOG7lt2DJP7RMfJPTduNZcp3xUFK")
+
+# yudong
+# api = TwitterAPI("sRVZEM6K02ovYJ0At147BpGbu", "w85lyM2ZAZrBzuxlgtVG2H4BUJJbeLQ7fnLxA1hCCLeXRl2hhj", "772828862942175232-EohaQboJpvZkor7bt0argGggkAwh2mo", "pD1auN2XIVWFtQl84mbQW8FU2rugGTuZEoVDVVFlNVkZW")
 
 class MLTwitterAPI(object):	
 	def searchForUsers(self):
@@ -29,6 +40,7 @@ class MLTwitterAPI(object):
 			if res[0] is not None:
 				res = res[0]["location"].lower()
 		except Exception as e:
+			print res
 			raise
 		return (('ny' in res) or ('new york' in res) or ('newyork' in res))
 
@@ -40,7 +52,6 @@ class MLTwitterAPI(object):
 			try:
 				if data["geo"] is not None:
 					twitterModel.insertUserDataIntoDatabase(data)
-					print 'new twitts added!! id: ' + str(data["id"])
 			except Exception as e:
 				print data
 				print 'user id:' + userId

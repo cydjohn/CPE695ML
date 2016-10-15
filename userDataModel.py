@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-  
 from userData import MLUserDatabase
 from twitterData import MLTwitterDatabase
 
