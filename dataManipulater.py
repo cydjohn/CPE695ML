@@ -1,5 +1,6 @@
 # -*- coding: UTF-8 -*-  
 from userData import MLUserDatabase
+
 from twitterData import MLTwitterDatabase
 from twitterAPI import MLTwitterAPI
 from userDataModel import userDataModel
@@ -28,8 +29,8 @@ if __name__ == "__main__":
 
 	geatherUsers()
 	geatherUserTimeline()
+	deleteUselessUser()
 	showNumberOfUsersAndTwitts()
-	# deleteUselessUser()
 
 
 
