@@ -1,15 +1,14 @@
 # -*- coding: UTF-8 -*-  
 from TwitterAPI import TwitterAPI
 import json
-from userDataModel import userDataModel
-from twitterDataModel import twitterDataModel
+from datamodel import *
 
 
 userModel = userDataModel()
 twitterModel = twitterDataModel()
 
 # fanxiao
-# api = TwitterAPI("YgsQDGjL81nHTHu2hmXTfpvlx", "rn6tGwEsLRHiD4qUF3AvLVIaA3z3xolUZmWXtO6rKDDNbvCdWa", "1621725078-TaZJpo2o9vRLljpQKLojR1OJEOmhVFNSJjx4Uc2", "JmYWcmwBNSaixb0wC80nCzxDUh794odqzfiuR6gt4JBBF")
+api = TwitterAPI("YgsQDGjL81nHTHu2hmXTfpvlx", "rn6tGwEsLRHiD4qUF3AvLVIaA3z3xolUZmWXtO6rKDDNbvCdWa", "1621725078-TaZJpo2o9vRLljpQKLojR1OJEOmhVFNSJjx4Uc2", "JmYWcmwBNSaixb0wC80nCzxDUh794odqzfiuR6gt4JBBF")
 
 # houxiao
 # api = TwitterAPI("W8NTyH7gPrpHqarHAN7wgLmfS", "RcRb3pfmroL4HM2vdkOVbQ1pKU2UGvFcZEaB1X1LTljxDsB9KE", "787382500775567360-ejMvvlX2eMuqKpsfPJTfeYm5XVFNNVn", "oxkblc1iVzbKUwlUoZNlMLsg6Q4Z39GckmnpdhOJbZxxT")
@@ -21,7 +20,7 @@ twitterModel = twitterDataModel()
 # api = TwitterAPI("s45hPkpXAlWSMnwu7pqftpVRa", "nNBUIbXr8428DzQatmFIobJ3Bd67JUTSqzkYES1RlJXHuTPpUd", "787306318826799104-Q81JDS0Vz70W7hSBTqZkUeywx9r7FX2", "s3DLsZRVMolwQOhbqeOG7lt2DJP7RMfJPTduNZcp3xUFK")
 
 # yudong
-api = TwitterAPI("sRVZEM6K02ovYJ0At147BpGbu", "w85lyM2ZAZrBzuxlgtVG2H4BUJJbeLQ7fnLxA1hCCLeXRl2hhj", "772828862942175232-EohaQboJpvZkor7bt0argGggkAwh2mo", "pD1auN2XIVWFtQl84mbQW8FU2rugGTuZEoVDVVFlNVkZW")
+# api = TwitterAPI("sRVZEM6K02ovYJ0At147BpGbu", "w85lyM2ZAZrBzuxlgtVG2H4BUJJbeLQ7fnLxA1hCCLeXRl2hhj", "772828862942175232-EohaQboJpvZkor7bt0argGggkAwh2mo", "pD1auN2XIVWFtQl84mbQW8FU2rugGTuZEoVDVVFlNVkZW")
 
 class MLTwitterAPI(object):	
 	def searchForUsers(self):
@@ -58,11 +57,3 @@ class MLTwitterAPI(object):
 				print data
 				print 'user id:' + userId
 				raise e
-
-				
-
-
-
-
-
-

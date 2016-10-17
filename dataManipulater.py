@@ -1,32 +1,29 @@
-# -*- coding: UTF-8 -*-  
-from userData import MLUserDatabase
-
-from twitterData import MLTwitterDatabase
-from twitterAPI import MLTwitterAPI
-from userDataModel import userDataModel
+# -*- coding: UTF-8 -*- 
+from netWork import MLTwitterAPI
+from datamodel import *
 import json
 
-userdb= MLUserDatabase()
-twitterdb = MLTwitterDatabase()
 Twitter = MLTwitterAPI()
 userDataModel = userDataModel()
+twitterDataModel = twitterDataModel()
 
 def geatherUsers():
 	Twitter.searchForUsers()
 
 def geatherUserTimeline():
-	for d in userdb.getAllData():
+	for d in userDataModel.getAllUsers():
 		Twitter.getUserTimelineByUserId(d["id_str"])
 
 def deleteUselessUser():
 	userDataModel.deleteUselessUserById()
 
 def showNumberOfUsersAndTwitts():
-	twitterdb.getAllDataNumber()
-	userdb.getAllDataNumber()
+	twitterDataModel.getAllTwittsNumber()
+	userDataModel.getAllUsersNumber()
 
 if __name__ == "__main__":
 
+	# twitterDataModel.deleteUselessTwitt()
 	geatherUsers()
 	geatherUserTimeline()
 	deleteUselessUser()

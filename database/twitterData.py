@@ -26,5 +26,11 @@ class MLTwitterDatabase():
 	def findUserById(self,userId):
 		return  not twitterData.find_one({"user.id_str":userId}) is None
 
+	def deleteOne(self,twittId):
+		return twitterData.delete_one({"id_str": twittId}).deleted_count
+
+	def deleteMany(self,data):
+		twitterData.delete_many(data).deleted_count
+
 	# def removeAllData(self):
 	# 	twitterData.remove()

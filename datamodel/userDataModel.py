@@ -1,6 +1,5 @@
 # -*- coding: UTF-8 -*-  
-from userData import MLUserDatabase
-from twitterData import MLTwitterDatabase
+from database import *
 
 userdb= MLUserDatabase()
 twitterdb = MLTwitterDatabase()
@@ -21,4 +20,10 @@ class userDataModel(object):
 			
 		# 		userdb.deleteUserById(d["id_str"])
 		# print 'lal'
+	def getAllUsers(self):
+		return userdb.getAllData()
+
+
+	def getAllUsersNumber(self):
+		userdb.getAllDataNumber()
 

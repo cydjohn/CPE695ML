@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-  
-from twitterData import MLTwitterDatabase
+from database import MLTwitterDatabase
 
 twitterdb = MLTwitterDatabase()
 
@@ -11,5 +11,13 @@ class twitterDataModel(object):
 			print 'new twitts added!! id: ' + str(data["id"])
 			print data["geo"]
 
-	
+	def deleteUselessTwitt(self):
+		for d in twitterdb.getAllData():
+			if d["geo"]["coordinates"] == [-0.0244, 37.9039]:
+				print d["user"]["id"]
+		# print twitterdb.deleteMany({"geo.coordinates":[-0.0244, 37.9039]})
+		# print 
+
+	def getAllTwittsNumber(self):
+		twitterdb.getAllDataNumber()
 		
