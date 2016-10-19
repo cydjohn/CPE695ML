@@ -11,8 +11,8 @@ def geatherUsers():
 	Twitter.searchForUsers()
 
 def geatherUserTimeline():
-	for d in userDataModel.getAllUsers():
-		Twitter.getUserTimelineByUserId(d["id_str"])
+	for user in userDataModel.getAllUsers():
+		Twitter.getUserTimelineByUserId(user["id_str"])
 
 def deleteUselessUser():
 	userDataModel.deleteUselessUserById()
@@ -22,7 +22,6 @@ def showNumberOfUsersAndTwitts():
 	userDataModel.getAllUsersNumber()
 
 if __name__ == "__main__":
-
 	# twitterDataModel.deleteUselessTwitt()
 	geatherUsers()
 	geatherUserTimeline()

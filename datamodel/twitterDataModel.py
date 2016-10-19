@@ -8,7 +8,7 @@ class twitterDataModel(object):
 	def insertUserDataIntoDatabase(self,data):
 		if twitterdb.find_one(data["id_str"]) is False:
 			twitterdb.addData(data)
-			print 'new twitts added!! id: ' + str(data["id"])
+			print 'new tweet added!! id: ' + str(data["id"])
 			print data["geo"]
 
 	def deleteUselessTwitt(self):

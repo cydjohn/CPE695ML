@@ -12,7 +12,7 @@ class MLTwitterDatabase():
 
 	def getAllDataNumber(self):
 		number = twitterData.find().count()
-		print 'total twitts number: ' + str(number)
+		print 'total tweets number: ' + str(number)
 		return number
 
 	def find_one(self,dataId):
