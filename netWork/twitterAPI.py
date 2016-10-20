@@ -17,10 +17,10 @@ twitterModel = twitterDataModel()
 # api = TwitterAPI("TtbTJVlxNchNPpBNhNVpqmxp1", "ard2JXdId7JkRM057JHe9RQkfmFWfMFSvscYyzTV6T10OYxhi4", "2686608859-Xl3s3B0fjk6Te7D2lC8l7eChKwKFaTgTyFZqzaU", "pcJYLNB3lNbsd2PuZJUc2L18Xd1GraomxD81FKpgPs4Zp")
 
 # ziheng
-# api = TwitterAPI("s45hPkpXAlWSMnwu7pqftpVRa", "nNBUIbXr8428DzQatmFIobJ3Bd67JUTSqzkYES1RlJXHuTPpUd", "787306318826799104-Q81JDS0Vz70W7hSBTqZkUeywx9r7FX2", "s3DLsZRVMolwQOhbqeOG7lt2DJP7RMfJPTduNZcp3xUFK")
+api = TwitterAPI("s45hPkpXAlWSMnwu7pqftpVRa", "nNBUIbXr8428DzQatmFIobJ3Bd67JUTSqzkYES1RlJXHuTPpUd", "787306318826799104-Q81JDS0Vz70W7hSBTqZkUeywx9r7FX2", "s3DLsZRVMolwQOhbqeOG7lt2DJP7RMfJPTduNZcp3xUFK")
 
 # yudong
-api = TwitterAPI("sRVZEM6K02ovYJ0At147BpGbu", "w85lyM2ZAZrBzuxlgtVG2H4BUJJbeLQ7fnLxA1hCCLeXRl2hhj", "772828862942175232-EohaQboJpvZkor7bt0argGggkAwh2mo", "pD1auN2XIVWFtQl84mbQW8FU2rugGTuZEoVDVVFlNVkZW")
+# api = TwitterAPI("sRVZEM6K02ovYJ0At147BpGbu", "w85lyM2ZAZrBzuxlgtVG2H4BUJJbeLQ7fnLxA1hCCLeXRl2hhj", "772828862942175232-EohaQboJpvZkor7bt0argGggkAwh2mo", "pD1auN2XIVWFtQl84mbQW8FU2rugGTuZEoVDVVFlNVkZW")
 
 class MLTwitterAPI(object):	
 	def searchForUsers(self):
