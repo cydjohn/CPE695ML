@@ -18,7 +18,7 @@ class twitterDataModel(object):
 		# print twitterdb.deleteMany({"geo.coordinates":[-0.0244, 37.9039]})
 		# print 
 	def countUserTweets(self,data):
-		return twitterdb.find(data)
+		return twitterdb.find(data).count()
 
 	def getAllTwittsNumber(self):
 		twitterdb.getAllDataNumber()

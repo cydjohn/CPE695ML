@@ -1,11 +1,13 @@
 # -*- coding: UTF-8 -*- 
 from netWork import MLTwitterAPI
 from datamodel import *
+from statisticalDiagram import *
 import json
 
 Twitter = MLTwitterAPI()
 userDataModel = userDataModel()
 twitterDataModel = twitterDataModel()
+statisticalDg = MLHistogram()
 
 def geatherUsers():
 	Twitter.searchForUsers()
@@ -22,8 +24,10 @@ def showNumberOfUsersAndTwitts():
 	userDataModel.getAllUsersNumber()
 
 def countUserWteets():
+	result = []
 	for user in userDataModel.getAllUsers():
-		twitterDataModel.countUserTweets(user["id_str"])
+		result.append(twitterDataModel.countUserTweets(user["id_str"]))
+	return result
 
 if __name__ == "__main__":
 	# twitterDataModel.deleteUselessTwitt()
@@ -31,15 +35,9 @@ if __name__ == "__main__":
 	# geatherUserTimeline()
 	# deleteUselessUser()
 	# showNumberOfUsersAndTwitts()
-	result = {}
-	for d in countUserWteets():
-		# if d not in result:
-		# 	result[d] = 0 
-		# result[d] += 1
 
-
-	for key,value in result():  
-		print key + ":%d" % value     
+	statisticalDg.drawHistogramWithArray(countUserWteets())
+	    
 
 
 
