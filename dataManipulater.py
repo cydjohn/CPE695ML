@@ -30,13 +30,13 @@ def countUserWteets():
 	return result
 
 if __name__ == "__main__":
-	# twitterDataModel.deleteUselessTwitt()
-	# geatherUsers()
-	# geatherUserTimeline()
-	# deleteUselessUser()
-	# showNumberOfUsersAndTwitts()
+	twitterDataModel.deleteUselessTwitt()
+	geatherUsers()
+	geatherUserTimeline()
+	deleteUselessUser()
+	showNumberOfUsersAndTwitts()
 
-	statisticalDg.drawHistogramWithArray(countUserWteets())
+	# statisticalDg.drawHistogramWithArray(countUserWteets())
 	    
 
 

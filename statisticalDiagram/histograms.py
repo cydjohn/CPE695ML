@@ -14,6 +14,3 @@ class MLHistogram(object):
 		plt.ylabel("User number")
 		plt.show()
 		plt.savefig("histogram")
-
-
-
