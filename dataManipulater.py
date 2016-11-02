@@ -7,7 +7,7 @@ import json
 Twitter = MLTwitterAPI()
 userDataModel = userDataModel()
 twitterDataModel = twitterDataModel()
-statisticalDg = MLHistogram()
+statisticalDg = MLStatisticalDiagram()
 
 def geatherUsers():
 	Twitter.searchForUsers()
@@ -29,14 +29,35 @@ def countUserWteets():
 		result.append(twitterDataModel.countUserTweets(user["id_str"]))
 	return result
 
-if __name__ == "__main__":
-	twitterDataModel.deleteUselessTwitt()
+def getDatas():
 	geatherUsers()
 	geatherUserTimeline()
 	deleteUselessUser()
 	showNumberOfUsersAndTwitts()
 
-	# statisticalDg.drawHistogramWithArray(countUserWteets())
+def getDaysAndTweetsOfUser():
+	numberOfTweets = []
+	days = []
+	for user in userDataModel.getAllUsers():
+		data = twitterDataModel.getDaysAndTweetsPerUser(user["id_str"])
+		numberOfTweets.append(data[0])
+		days.append(data[1])
+	return [numberOfTweets,days]
+
+
+def drawHistogram():
+	statisticalDg.drawHistogramWithArray(countUserWteets())
+
+def drawScatterPlots():
+	deleteUselessUser()
+	data = getDaysAndTweetsOfUser()
+	statisticalDg.drawScatterPlotsWithXY(data[1],data[0])
+
+if __name__ == "__main__":
+
+	drawScatterPlots()
+
+	
 	    
 
 

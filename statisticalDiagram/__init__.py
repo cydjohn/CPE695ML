@@ -1,1 +1,1 @@
-from histograms import MLHistogram
+from histograms import MLStatisticalDiagram

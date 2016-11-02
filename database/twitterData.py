@@ -20,7 +20,7 @@ class MLTwitterDatabase():
 			return False
 		return True
 
-	def find(self,data):
+	def getTweetsListByUserId(self,data):
 		return twitterData.find({"user.id_str":data}) 
 
 	def findUserById(self,userId):
@@ -31,6 +31,7 @@ class MLTwitterDatabase():
 
 	def deleteMany(self,data):
 		twitterData.delete_many(data).deleted_count
+
 
 	# def removeAllData(self):
 	# 	twitterData.remove()

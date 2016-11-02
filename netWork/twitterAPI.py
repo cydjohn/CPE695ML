@@ -11,10 +11,10 @@ twitterModel = twitterDataModel()
 # api = TwitterAPI("YgsQDGjL81nHTHu2hmXTfpvlx", "rn6tGwEsLRHiD4qUF3AvLVIaA3z3xolUZmWXtO6rKDDNbvCdWa", "1621725078-TaZJpo2o9vRLljpQKLojR1OJEOmhVFNSJjx4Uc2", "JmYWcmwBNSaixb0wC80nCzxDUh794odqzfiuR6gt4JBBF")
 
 # houxiao
-api = TwitterAPI("W8NTyH7gPrpHqarHAN7wgLmfS", "RcRb3pfmroL4HM2vdkOVbQ1pKU2UGvFcZEaB1X1LTljxDsB9KE", "787382500775567360-ejMvvlX2eMuqKpsfPJTfeYm5XVFNNVn", "oxkblc1iVzbKUwlUoZNlMLsg6Q4Z39GckmnpdhOJbZxxT")
+# api = TwitterAPI("W8NTyH7gPrpHqarHAN7wgLmfS", "RcRb3pfmroL4HM2vdkOVbQ1pKU2UGvFcZEaB1X1LTljxDsB9KE", "787382500775567360-ejMvvlX2eMuqKpsfPJTfeYm5XVFNNVn", "oxkblc1iVzbKUwlUoZNlMLsg6Q4Z39GckmnpdhOJbZxxT")
 
 # aojia
-# api = TwitterAPI("TtbTJVlxNchNPpBNhNVpqmxp1", "ard2JXdId7JkRM057JHe9RQkfmFWfMFSvscYyzTV6T10OYxhi4", "2686608859-Xl3s3B0fjk6Te7D2lC8l7eChKwKFaTgTyFZqzaU", "pcJYLNB3lNbsd2PuZJUc2L18Xd1GraomxD81FKpgPs4Zp")
+api = TwitterAPI("TtbTJVlxNchNPpBNhNVpqmxp1", "ard2JXdId7JkRM057JHe9RQkfmFWfMFSvscYyzTV6T10OYxhi4", "2686608859-Xl3s3B0fjk6Te7D2lC8l7eChKwKFaTgTyFZqzaU", "pcJYLNB3lNbsd2PuZJUc2L18Xd1GraomxD81FKpgPs4Zp")
 
 # ziheng
 # api = TwitterAPI("s45hPkpXAlWSMnwu7pqftpVRa", "nNBUIbXr8428DzQatmFIobJ3Bd67JUTSqzkYES1RlJXHuTPpUd", "787306318826799104-Q81JDS0Vz70W7hSBTqZkUeywx9r7FX2", "s3DLsZRVMolwQOhbqeOG7lt2DJP7RMfJPTduNZcp3xUFK")
