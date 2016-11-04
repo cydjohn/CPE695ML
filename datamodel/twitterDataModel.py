@@ -1,5 +1,6 @@
 # -*- coding: UTF-8 -*-  
 from database import MLTwitterDatabase
+import json
 
 twitterdb = MLTwitterDatabase()
 
@@ -32,7 +33,7 @@ class twitterDataModel(object):
 			a["_id"] = 'asdf'
 			if(a["created_at"].split(' ')[1] == 'Oct'):
 				time.append(a["created_at"].split(' ')[2])
-			# print json.dumps(a["created_at"], indent=4, sort_keys=True)
+			print json.dumps(a, indent=4, sort_keys=True)
 
 		time.sort()
 		if(len(time)>0):
