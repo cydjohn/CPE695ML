@@ -55,7 +55,9 @@ def drawScatterPlots():
 
 if __name__ == "__main__":
 
-	drawScatterPlots()
+	for user in userDataModel.getAllUsers():
+		data = twitterDataModel.getDaysAndTweetsPerUser(user["id_str"])
+		print data
 
 	
 	    
