@@ -41,5 +41,12 @@ class twitterDataModel(object):
 		else:
 			return [0,0]
 
+	def getTimeLongituteLatitutePerUser(self,userId):
+		data = []
+		for a in twitterdb.getTweetsListByUserId(userId):
+			data.append([a["id_str"],a["created_at"],a["geo"]["coordinates"][0],a["geo"]["coordinates"][1]])
+
+		return data
+
 
 		
