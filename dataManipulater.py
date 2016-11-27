@@ -11,6 +11,7 @@ twitterDataModel = twitterDataModel()
 statisticalDg = MLStatisticalDiagram()
 exportData = MLExportData()
 
+
 def geatherUsers():
 	Twitter.searchForUsers()
 
@@ -68,14 +69,14 @@ def exportDataToCSV():
 			time.append(d[1])
 			longitude.append(d[2])
 			latitude.append(d[3])
-		rowData = {'userId':userId, 'time':time, 'longitude':longitude, 'latitude':latitude}
+		rowData = {'userId':userId,  'time':time, 'longitude':longitude, 'latitude':latitude}
 	# print rowData
 		exportData.toCSV(rowData,user["id_str"])
 
 
 if __name__ == "__main__":
-
-	exportDataToCSV()
+	
+	# exportDataToCSV()
 
 	
 	    
