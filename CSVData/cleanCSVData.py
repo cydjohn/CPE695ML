@@ -32,7 +32,7 @@ class cleanCSVData(object):
 				fileName = "cleanedCSVData/"+file
 				self.writeDataToCSV(df,fileName)
 
-	def writeDataToCSV(self,dataFlow,fleName):
+	def writeDataToCSV(self,dataFlow,fileName):
 		dataFlow.to_csv(fileName)
 
 	def analysisData(self,data,userId):
