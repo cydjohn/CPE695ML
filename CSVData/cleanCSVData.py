@@ -1,6 +1,9 @@
 # coding: utf-8
 import os
 import pandas
+from Graham_scan import GrahamScan
+
+grahamScan = GrahamScan()
 
 class cleanCSVData(object):
 	def cleanType(self,data):
@@ -48,6 +51,12 @@ class cleanCSVData(object):
 		numberOfPeriod10_15 = 0
 		numberOfPeriod15_20 = 0
 		numberOfPeriodRest = 0
+		coordinates = 0
+
+		for num in range(0,data["longitude"]):
+			coordinates.append({'y':data["longitude"][num],'x':data["latitude"][num]})
+
+		grahamScan.graham_scan(coordinates)
 
 #  from geopy.distance import vincenty
 #  newport_ri = (41.49008, -71.312796)
