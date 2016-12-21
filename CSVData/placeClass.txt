@@ -1,0 +1,6 @@
+For palce class
+SVM: 73.2595274182%
+Naïve Bayes: 62.6590208552%
+KNN: 61.2111022183%
+Decision Tree: 81.1598229819%
+Logistic Regression: 55.5282060079%

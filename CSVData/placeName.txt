@@ -1,0 +1,6 @@
+For place name
+SVM: 57.4350422698%
+Naïve Bayes: 56.1249750331%
+KNN: 37.5860299393%
+Decision Tree: 70.0568110609%
+Logistic Regression: 31.5717556728%

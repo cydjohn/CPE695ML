@@ -52,6 +52,7 @@ class MLPredict(object):
 				data = pandas.read_csv(path+file)
 				self.trainData(data)
 
+
 	def trainData(self,data):
 		train = int(len(data)*0.75)
 		predict = len(data) - train
@@ -63,10 +64,10 @@ class MLPredict(object):
 			day = self.setDay(data["time"][num][:3])
 			time = data["time"][num][11:-17]
 
-			X.append([day,int(time),self.replaceClass(data["class"][num]),self.replaceType(data["type"][num])])
-			Y.append(self.replacePlace(data["placename"][num]))
-
-
+			# X.append([day,int(time),self.replaceClass(data["class"][num]),self.replaceType(data["type"][num])])
+			# Y.append(self.replacePlace(data["placename"][num]))
+			X.append([day,int(time)])
+			Y.append(self.replaceClass(data["class"][num]))
 		# clf = svm.SVC()
 		# clf = GaussianNB()
 		# clf = KNeighborsClassifier()
