@@ -52,7 +52,7 @@ def drawHistogram():
 	statisticalDg.drawHistogramWithArray(countUserWteets())
 
 def drawScatterPlots():
-	deleteUselessUser()
+	# deleteUselessUser()
 	data = getDaysAndTweetsOfUser()
 	statisticalDg.drawScatterPlotsWithXY(data[1],data[0])
 
@@ -77,6 +77,7 @@ def exportDataToCSV():
 if __name__ == "__main__":
 	
 	# exportDataToCSV()
+	drawHistogram()
 
 	
 	    

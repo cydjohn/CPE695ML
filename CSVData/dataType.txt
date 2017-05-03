@@ -1,0 +1,6 @@
+For data type
+SVM: 59.9090139474%
+Naïve Bayes: 55.3927801416%
+KNN: 45.1531440283%
+Decision Tree: 73.4140722922%
+Logistic Regression: 36.4599325473%
